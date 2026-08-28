@@ -60,7 +60,22 @@ const secondaryLinks = [
               >
                 <span class="destination-title">{link.label}</span>
 
-                <span class="arrow">↗</span>
+                <span class="arrow">
+                  <svg
+                    class="arrow"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M7 17L17 7M8 7h9v9"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
               </a>
             ))
           }
@@ -193,8 +208,12 @@ const secondaryLinks = [
   }
 
   .arrow {
+    width: 16px;
+    height: 16px;
+
     color: #555;
-    font-size: 1rem;
+
+    flex-shrink: 0;
 
     transition:
       color 180ms ease,
